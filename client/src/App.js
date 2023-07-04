@@ -28,9 +28,9 @@ function App() {
         {
            data.map(val =>{
             return(
-                <div>
-                  <img height="100px" width="200px" src={val.image}></img>
-                  <h1>{val.title}</h1>
+                <div className='card'>
+                  <img src={val.image}></img>
+                  <h5>{val.title}</h5>
                   <p>{val.price}</p>
                   </div>
             
