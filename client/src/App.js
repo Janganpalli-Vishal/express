@@ -14,7 +14,7 @@ function App() {
     //   console.log(data)
     //   setData(data)
     // })
-    const data = await axios.get("")
+    const data = await axios.get("http://localhost:5000/products")
     console.log(data)
     setData(data.data)
   }
@@ -27,7 +27,14 @@ function App() {
     <div className="App">
         {
            data.map(val =>{
-            return <h1>{val.title}</h1>
+            return(
+                <div>
+                  <img height="100px" width="200px" src={val.image}></img>
+                  <h1>{val.title}</h1>
+                  <p>{val.price}</p>
+                  </div>
+            
+            ) 
            })
         }
     </div>
